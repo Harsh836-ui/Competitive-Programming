@@ -43,7 +43,6 @@ void binsearch(int arr[], int lb , int ub , int x) {
 	}
 }
 
-
 int main() {
 
 	int n; cin >> n;
@@ -55,7 +54,17 @@ int main() {
 	int x; cin >> x;
 	sort(arr, arr + n);
 	binsearch(arr, 0 , n - 1 , x);
-
 }
+
+//Kadane Algo:
+
+int best = 0, sum = 0;
+for (int k = 0; k < n; k++) {
+sum = max(array[k],sum+array[k]);
+best = max(best,sum);
+}
+cout << best << "\n";
+
+//
 
 
