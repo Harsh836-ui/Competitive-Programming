@@ -65,6 +65,12 @@ best = max(best,sum);
 }
 cout << best << "\n";
 
-//
+//Sum of array stl
+int arraySum(int a[], int n)
+{
+	int initial_sum  = 0;
+	return accumulate(a, a + n, initial_sum);
+}
+int sum = arraySum(arr, n);
 
 
